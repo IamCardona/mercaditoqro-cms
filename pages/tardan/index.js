@@ -152,7 +152,7 @@ const Tardan = () => {
         </Row>
       </div>
 
-      {/** Modal */}
+      {/** Modal View */}
       <Modal
         title={name}
         visible={visibleModal}
@@ -171,16 +171,23 @@ const Tardan = () => {
           return(
             <div key={index}>
               <p><strong>{color.color}</strong></p>
-              {color.photos.map((img ,i) => {
-                return(
-                  <Image key={i} src={img.url} alt={img.name} width={100} className="click" />
-                )
-              })}
+              <Row gutter={[8, 8]}>
+                {color.photos.map((img ,i) => {
+                  return(
+                    <Col xs={8} sm={8} md={6} xl={6} style={{ overflow: "hidden", height: "100px" }}>
+                      <div>
+                        <Image key={i} src={img.url} alt={img.name} width={100} className="click" style={{ margin: "1rem" }} />
+                      </div>
+                    </Col>
+                  )
+                })}
+              </Row>
             </div>
           )
         })}
       </Modal>
 
+      {/** Modal Delete */}
       <Modal
         visible={deleteModal}
         onCancel={() => setDeleteModal(false)}

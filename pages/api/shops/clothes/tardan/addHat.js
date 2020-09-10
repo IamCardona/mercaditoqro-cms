@@ -8,11 +8,12 @@ export default async (req, res) => {
 
   try {
     const user = await admin.auth().verifyIdToken(token)
-    if(!user.admin) return res.status(403).send(";(")
+    if(!user.admin) return res.status(403).json({ message: ";(" })
 
     await admin.firestore().collection('tardan').add(hat)
-    res.status(200).send("Correcto")
+    res.status(200).json({ message: "Parece que todo salio bien" })
   } catch(e) {
-    res.status(400).send("Algo salio mal vuelve a intentarlo")
+    console.log(e)
+    res.status(400).json({ message: "Algo salio mal, vuelve a intentarlo" })
   }
 }

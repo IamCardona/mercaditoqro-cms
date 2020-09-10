@@ -15,6 +15,6 @@ export default async (_, res) => {
     res.status(200).json({ hats: data })
   } catch(e) {
     console.log(e.message)
-    res.status(400).send("Algo salio mal ;(")
+    res.status(400).json({ message: "Algo salio mal ;(" })
   }
 }

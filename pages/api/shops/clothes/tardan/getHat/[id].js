@@ -2,7 +2,6 @@ import admin from '../../../../../../lib/auth/firebaseAdmin'
 
 export default async (req, res) => {
   const hatId = req.query.id
-  console.log("Query")
 
   try {
     const hat = await admin.firestore().collection('tardan').doc(hatId).get()

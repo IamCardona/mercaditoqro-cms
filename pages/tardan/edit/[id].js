@@ -136,7 +136,7 @@ const EditHat = () => {
 
       {/** Title */}
       <div style={{ textAlign: "center" }}>
-        {<h1>Agregar Sombrero <img src="/sombrero.svg"style={{ width: "2.5rem" }} /></h1>}
+        {<h1>Actualizar Sombrero <img src="/sombrero.svg"style={{ width: "2.5rem" }} /></h1>}
       </div>
 
       {/** Form */}
@@ -343,7 +343,7 @@ const EditHat = () => {
         </Row>
 
         <Form.Item style={{ margin: "1rem" }}>
-          <Button type="primary" htmlType="submit">Agregar sombrero</Button>
+          <Button type="primary" htmlType="submit">Actualizar producto</Button>
         </Form.Item>
 
       </Form>
