@@ -155,10 +155,10 @@ const AddProduct = () => {
             <Form.Item
                 label="Sobrenombre"
                 name="nickname"
-                rules={[{
+                /* rules={[{
                   required: true,
                   message: "Agrega un sobrenombre"
-                }]}
+                }]} */
               >
                 <Input />
               </Form.Item>

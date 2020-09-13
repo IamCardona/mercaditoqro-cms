@@ -10,7 +10,7 @@ export default async (req, res) => {
     const userToken = await admin.auth().verifyIdToken(token)
     if(!userToken.admin) return res.status(403).json({ message: ";(" })
 
-    await admin.firestore().collection('tardan').doc(id).update(data)
+    await admin.firestore().collection('/shops/tardan/products').doc(id).update(data)
 
     res.status(200).json({ message: data.name })
   } catch(e) {

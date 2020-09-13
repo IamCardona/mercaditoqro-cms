@@ -159,7 +159,7 @@ const Tardan = () => {
         onCancel={() => setVisibleModal(false)}
         footer={null}
       >
-        <p><strong>Sobrenombre: </strong>{`${nickname}`}</p>
+        {nickname && <p><strong>Sobrenombre: </strong>{`${nickname}`}</p>}
         <p><strong>Categoría: </strong>{`${category}`}</p>
         <p><strong>Material: </strong>{`${material}`}</p>
         <p><strong>Precio: </strong>{`$${price}.00`}</p>

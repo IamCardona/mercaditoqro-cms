@@ -2,7 +2,7 @@ import firebase from '../../../../../lib/auth/firebase'
 
 export default async (_, res) => {
   try {
-    const snapshot = await firebase.firestore().collection('tardan').get()
+    const snapshot = await firebase.firestore().collection('/shops/tardan/products').get()
 
     const data = []
 
